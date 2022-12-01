@@ -13,7 +13,6 @@ public class TenthLab {
          emp.salary = 5;
          
          factory.HireNewEmp(emp);
-         factory.HireNewEmp(emp);
          
          System.out.println(factory.employees[1].name);
     }

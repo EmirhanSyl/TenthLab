@@ -13,21 +13,18 @@ public class Factory {
     }
     
     int TotalSalary(String titleVal){
-        int salary = 0;
-        
-        if (titleVal == "C") {
-            salary = 30000;
+        int total = 0;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].title == titleVal) {
+                total += employees[i].salary;
+            }
         }
-        else if (titleVal == "B") {
-            salary = 20000;
-        }
-        
-        return salary;
+        return total;
     }
     
     void IncreaseSalary(int id){
         for (Employee emp : employees) {
-            if (emp.id == id) {
+            if (emp != null && emp.id == id) {
                 emp.salary += 5000;
             }
         }
